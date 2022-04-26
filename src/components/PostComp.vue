@@ -44,7 +44,12 @@ const props = defineProps({
 
 <template>
   <h1>{{ msg }}</h1>
-  {{ "포스트 번호 : " + $route.params.id }}
+  <p v-if="$route.params.id">
+    {{ "포스트 번호 : " + $route.params.id }}
+  </p>
+  <p v-else>
+    {{ "유저 네임 : " + $route.params.userName }}
+  </p>
   <hr />
   <ChildComp msg="child"> Parent에서 보낸 슬롯! </ChildComp>
 </template>

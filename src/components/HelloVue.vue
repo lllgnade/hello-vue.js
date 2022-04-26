@@ -1,10 +1,14 @@
 <script setup>
 // eslint-disable-next-line no-unused-vars
 import { ref, reactive, computed, watch, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import ChildComp from "./ChildComp.vue";
 
 const todoId = ref(1);
 const todoData = ref(null);
+
+const route = useRoute();
+console.log(route.params.helloParam);
 
 // Ajax(fetch) 통신
 // eslint-disable-next-line no-unused-vars
@@ -44,5 +48,6 @@ const props = defineProps({
 
 <template>
   {{ msg }}
+  {{ "파라미터 : " + $route.params.helloParam }}
   <ChildComp msg="child"> Parent에서 보낸 슬롯! </ChildComp>
 </template>

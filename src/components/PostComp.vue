@@ -43,6 +43,8 @@ const props = defineProps({
 </script>
 
 <template>
-  {{ msg }}
+  <h1>{{ msg }}</h1>
+  {{ "포스트 번호 : " + $route.params.id }}
+  <hr />
   <ChildComp msg="child"> Parent에서 보낸 슬롯! </ChildComp>
 </template>

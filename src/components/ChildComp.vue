@@ -1,6 +1,6 @@
 <script setup>
 const nullValue = null;
-// eslint-disable-next-line
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
   msg: String,
 });
